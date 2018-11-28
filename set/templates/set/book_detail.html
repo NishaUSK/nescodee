@@ -8,8 +8,11 @@
             </div>
         {% endif %}
 
+{% if user.is_authenticated %}
+<a class="btn btn-default" href="{% url 'book_edit' pk=book.pk %}">Edit</a>
+{% endif %}
         <td>{{ book.author }}</td>
         <td>{{ book.text }}</td>
         <td>{{book.title}}</td>
 
-{% endblock %}         
+{% endblock %}
