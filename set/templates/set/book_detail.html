@@ -1,0 +1,15 @@
+{% extends 'set/base.html' %}
+
+{% block content %}
+
+        {% if book.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+
+        <td>{{ book.author }}</td>
+        <td>{{ book.text }}</td>
+        <td>{{book.title}}</td>
+
+{% endblock %}         

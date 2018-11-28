@@ -16,14 +16,14 @@ class Book(models.Model):
     def __str__(self):
         return self.title
 
-class Company(models.Model):
-    ceo = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    status = models.CharField(max_length=200)
-    launched_date = models.DateTimeField(blank=True, null=True)
-
-    def launch(self):
-        self.published_date = timezone.now()
-        self.save()
-
-    def __str__(self):
-        return self.status
+# class Company(models.Model):
+#     ceo = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+#     status = models.CharField(max_length=200)
+#     launched_date = models.DateTimeField(blank=True, null=True)
+#
+#     def launch(self):
+#         self.published_date = timezone.now()
+#         self.save()
+#
+#     def __str__(self):
+#         return self.status
