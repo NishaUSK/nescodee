@@ -22,12 +22,12 @@
 
 <div class="container">
   <h3 class="text-center">Table1</h3>
-<div class="row">
+
 <h4>Book</h4>
 {% if user.is_authenticated %}
 <h5><a href="{% url 'book_new' %}" class="top-menu">New Book</a></h5>
 {% endif %}
-</div>
+
 <!-- {{ books }} -->
   <table class="table table-bordered">
   <thead>

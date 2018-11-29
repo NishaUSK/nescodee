@@ -1,9 +1,13 @@
 {% extends 'set/base.html' %}
 
 {% block content %}
+
+<div class="col-8 offset-2">
+
     <h2>New Book</h2>
     <form method="BOOK" class="book-form">{% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Save</button>
     </form>
+</div>
 {% endblock %}

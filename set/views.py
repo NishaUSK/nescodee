@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Book
 from .forms import BookForm
@@ -9,7 +9,7 @@ def book_list(request):
 
 def book_detail(request, pk):
     book = get_object_or_404(Book, pk=pk)
-    return render(request, 'set/book_detail.html', {'books': books})
+    return render(request, 'set/book_detail.html', {'book': book})
 
 def book_new(request):
     if request.method == "BOOK":
